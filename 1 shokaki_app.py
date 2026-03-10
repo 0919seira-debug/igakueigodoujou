@@ -4,7 +4,8 @@ import random
 st.title("医学英語道場～消化器編～")
 st.write("医学生の、医学生による、医学生のためのアプリ")
 
-words = [
+all_words = {
+    "消化器":[
     {"english": "gastroesophageal reflux disease", "japanese": "胃食道逆流症"},
     {"english": "esophagitis", "japanese": "食道炎"},
     {"english": "Barrett esophagus", "japanese": "バレット食道"},
@@ -125,10 +126,45 @@ words = [
     {"english": "carcinoid tumor", "japanese": "カルチノイド腫瘍"},
     {"english": "gastrointestinal stromal tumor", "japanese": "消化管間質腫瘍"},
     {"english": "peritonitis", "japanese": "腹膜炎"}
-]
+],
+
+"血液": [
+        {"english": "anemia", "japanese": "貧血"},
+        {"english": "iron deficiency anemia", "japanese": "鉄欠乏性貧血"},
+        {"english": "megaloblastic anemia", "japanese": "巨赤芽球性貧血"},
+        {"english": "hemolytic anemia", "japanese": "溶血性貧血"},
+        {"english": "aplastic anemia", "japanese": "再生不良性貧血"},
+        {"english": "sickle cell disease", "japanese": "鎌状赤血球症"},
+        {"english": "thalassemia", "japanese": "サラセミア"},
+        {"english": "glucose-6-phosphate dehydrogenase deficiency", "japanese": "G6PD欠損症"},
+        {"english": "hereditary spherocytosis", "japanese": "遺伝性球状赤血球症"},
+        {"english": "disseminated intravascular coagulation", "japanese": "播種性血管内凝固"},
+        {"english": "hemophilia", "japanese": "血友病"},
+        {"english": "von Willebrand disease", "japanese": "フォン・ヴィレブランド病"},
+        {"english": "thrombocytopenia", "japanese": "血小板減少症"},
+        {"english": "immune thrombocytopenic purpura", "japanese": "免疫性血小板減少性紫斑病"},
+        {"english": "thrombotic thrombocytopenic purpura", "japanese": "血栓性血小板減少性紫斑病"},
+        {"english": "leukemia", "japanese": "白血病"},
+        {"english": "acute myeloid leukemia", "japanese": "急性骨髄性白血病"},
+        {"english": "acute lymphoblastic leukemia", "japanese": "急性リンパ性白血病"},
+        {"english": "chronic myeloid leukemia", "japanese": "慢性骨髄性白血病"},
+        {"english": "lymphoma", "japanese": "リンパ腫"},
+        {"english": "multiple myeloma", "japanese": "多発性骨髄腫"}
+    ]
+}
+
+department = st.selectbox("科を選んでください", list(all_words.keys()))
+words = all_words[department]
+
+if "last_department" not in st.session_state:
+    st.session_state.last_department = department
 
 if "current_word" not in st.session_state:
     st.session_state.current_word=random.choice(words)
+
+if st.session_state.last_department != department:
+    st.session_state.current_word = random.choice(words)
+    st.session_state.last_department = department
 
 word=st.session_state.current_word
 
