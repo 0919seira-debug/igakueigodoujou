@@ -1,7 +1,7 @@
 import streamlit as st
 import random
 
-st.title("医学英語道場～消化器編～")
+st.title("医学英語道場")
 st.write("医学生の、医学生による、医学生のためのアプリ")
 
 all_words = {
