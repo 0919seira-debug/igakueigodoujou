@@ -127,7 +127,58 @@ all_words = {
     {"english": "gastrointestinal stromal tumor", "japanese": "消化管間質腫瘍"},
     {"english": "peritonitis", "japanese": "腹膜炎"}
 ],
-
+"神経内科": [
+    {"english": "stroke", "japanese": "脳卒中"},
+    {"english": "ischemic stroke", "japanese": "脳梗塞"},
+    {"english": "hemorrhagic stroke", "japanese": "脳出血"},
+    {"english": "subarachnoid hemorrhage", "japanese": "くも膜下出血"},
+    {"english": "transient ischemic attack", "japanese": "一過性脳虚血発作"},
+    {"english": "epilepsy", "japanese": "てんかん"},
+    {"english": "status epilepticus", "japanese": "てんかん重積状態"},
+    {"english": "migraine", "japanese": "片頭痛"},
+    {"english": "tension headache", "japanese": "緊張型頭痛"},
+    {"english": "cluster headache", "japanese": "群発頭痛"},
+    {"english": "Parkinson disease", "japanese": "パーキンソン病"},
+    {"english": "parkinsonism", "japanese": "パーキンソニズム"},
+    {"english": "essential tremor", "japanese": "本態性振戦"},
+    {"english": "Huntington disease", "japanese": "ハンチントン病"},
+    {"english": "amyotrophic lateral sclerosis", "japanese": "筋萎縮性側索硬化症"},
+    {"english": "multiple sclerosis", "japanese": "多発性硬化症"},
+    {"english": "neuromyelitis optica", "japanese": "視神経脊髄炎"},
+    {"english": "Guillain-Barre syndrome", "japanese": "ギラン・バレー症候群"},
+    {"english": "myasthenia gravis", "japanese": "重症筋無力症"},
+    {"english": "Lambert-Eaton myasthenic syndrome", "japanese": "ランバート・イートン筋無力症候群"},
+    {"english": "myopathy", "japanese": "ミオパチー"},
+    {"english": "muscular dystrophy", "japanese": "筋ジストロフィー"},
+    {"english": "Duchenne muscular dystrophy", "japanese": "デュシェンヌ型筋ジストロフィー"},
+    {"english": "peripheral neuropathy", "japanese": "末梢神経障害"},
+    {"english": "diabetic neuropathy", "japanese": "糖尿病性ニューロパチー"},
+    {"english": "carpal tunnel syndrome", "japanese": "手根管症候群"},
+    {"english": "Bell palsy", "japanese": "ベル麻痺"},
+    {"english": "trigeminal neuralgia", "japanese": "三叉神経痛"},
+    {"english": "facial nerve palsy", "japanese": "顔面神経麻痺"},
+    {"english": "dementia", "japanese": "認知症"},
+    {"english": "Alzheimer disease", "japanese": "アルツハイマー病"},
+    {"english": "vascular dementia", "japanese": "血管性認知症"},
+    {"english": "Lewy body dementia", "japanese": "レビー小体型認知症"},
+    {"english": "frontotemporal dementia", "japanese": "前頭側頭型認知症"},
+    {"english": "delirium", "japanese": "せん妄"},
+    {"english": "meningitis", "japanese": "髄膜炎"},
+    {"english": "encephalitis", "japanese": "脳炎"},
+    {"english": "brain abscess", "japanese": "脳膿瘍"},
+    {"english": "normal pressure hydrocephalus", "japanese": "正常圧水頭症"},
+    {"english": "hydrocephalus", "japanese": "水頭症"},
+    {"english": "brain tumor", "japanese": "脳腫瘍"},
+    {"english": "glioblastoma", "japanese": "膠芽腫"},
+    {"english": "vestibular schwannoma", "japanese": "前庭神経鞘腫"},
+    {"english": "cerebral palsy", "japanese": "脳性麻痺"},
+    {"english": "spinocerebellar degeneration", "japanese": "脊髄小脳変性症"},
+    {"english": "ataxia", "japanese": "運動失調"},
+    {"english": "vertigo", "japanese": "めまい"},
+    {"english": "syncope", "japanese": "失神"},
+    {"english": "restless legs syndrome", "japanese": "むずむず脚症候群"},
+    {"english": "sleep apnea syndrome", "japanese": "睡眠時無呼吸症候群"}
+],
 "血液": [
         {"english": "anemia", "japanese": "貧血"},
         {"english": "iron deficiency anemia", "japanese": "鉄欠乏性貧血"},
@@ -151,6 +202,7 @@ all_words = {
         {"english": "lymphoma", "japanese": "リンパ腫"},
         {"english": "multiple myeloma", "japanese": "多発性骨髄腫"}
     ]
+    
 }
 
 department = st.selectbox("科を選んでください", list(all_words.keys()))
